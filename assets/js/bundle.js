@@ -14,6 +14,7 @@
     const Form = create('form');
 
     Form.onsubmit = async e => {
+        e.preventDefault();
         const [email, password] = /* trecho omitido */ e.target.children;
 
         const {url} = await fakeAuthenticate(email.value, password.value);
@@ -24,9 +25,7 @@
     };
 
     Form.oninput = e => {
-        console.log('dd');
         const [email, password, button] = e.target.parentElement.children;
-        console.log(password.value.length);
         (!email.validity.valid || !email.value || password.value.length <= 5) 
             ? button.setAttribute('disabled','disabled')
             : button.removeAttribute('disabled');
