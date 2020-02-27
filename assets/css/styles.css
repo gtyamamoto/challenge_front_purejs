@@ -30,6 +30,93 @@ body {
     background-attachment: fixed;
 }
 
+#app{
+    display: flex;
+    flex-direction: column;
+    
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+}
+ .logo{
+    width: 55px;
+    height: 55px;
+    margin-bottom:10px;
+    
+}
+form{
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    border: 1px;
+    border-radius: 10px 0px 10px / 10px 10px;
+    padding: 10px;
+    background-color: #eee;
+    font-size: 14px;
+    min-width: 320px;
+}
+form input{
+ display: block;
+ width: 100%;
+ height: 24px;
+ margin: 5px auto;
+ padding: 10px;
+ border: none;
+ background-color: #cccccc;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px #ccc inset;
+}
+form button{
+    width: 100%;
+    border:none;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+form button:disabled{
+    background-color: gray;
+}
+form button:hover{
+    background-color: #2bb142;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    justify-content:center;
+  }
+  
+  .list-item {
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    flex: 0 18%;
+    display: flex;
+    /* flex-direction: column; */
+    padding: 5px;
+    font-size: 11px;
+    align-items: center;
+    background-color: white;
+    color: gray;
+    /* text-align: center; */
+    border-radius: 2%;
+    margin-left: 1%;
+    justify-content: space-around;
+    margin-bottom: 1%;
+  }
+  .list-item-img{
+      width:20px;
+      filter: grayscale(100%);
+      height: 20px;
+      border-radius: 50%;
+  }
+  .list-item-img:hover {
+      filter:none;
+    transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 /**
 * YOUR CODE HERE
 */
